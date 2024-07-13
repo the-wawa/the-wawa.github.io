@@ -1,3 +1,7 @@
+body {
+  line-height: 1px
+}
+
 .app {
   background-color: #988bb4;
   font-family: "Montserrat", sans-serif;
@@ -11,12 +15,25 @@
 
 .inner {
   background-color: #6a627c;
+  scrollbar-color: #6a627c;
   height: calc(100% - 40px);
   width: calc(100% - 40px);
   position: absolute;
+  overflow: auto;
   right: 20px;
   top: 20px;
   border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #6a627c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffe9ae;
+  border-radius: 3px;
 }
 
 .container {
@@ -30,7 +47,8 @@
 
 h1, h2, h3 {
   color: #ffe9ae;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 10px;
 }
 
 hr {
@@ -40,13 +58,13 @@ hr {
 p {
   color: #fffaeb;
   font-weight: 500;
-  line-height: 20px;
 }
 
 dl, ul {
   color: #fffaeb;
   font-weight: 500;
-  line-height: 20px
+  margin-top: -0.25rem;
+  line-height: 20px;
 }
 
 a {
